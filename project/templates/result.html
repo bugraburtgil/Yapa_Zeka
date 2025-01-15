@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sınıflandırma Sonucu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .result-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        img {
+            max-width: 300px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sınıflandırma Sonucu</h1>
+    <div class="result-container">
+        
+        
+        <h2>Tahmin Edilen Sınıf:</h2>
+        <img src="{{ url_for('static', filename='uploads/' + uploaded_image) }}" alt="Yüklenen Görüntü">
+        <h3>Yüklenen Görüntü:</h3>
+        <p>{{ predicted_class }}</p>
+        <a href="/">Geri Dön</a>
+    </div>
+</body>
+</html>
